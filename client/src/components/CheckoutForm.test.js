@@ -10,7 +10,24 @@ test("form header renders", () => {
 
     const header = screen.getByText(/checkout form/i);
     expect(header).toBeInTheDocument();
-    
+
 });
 
-test("form shows success message on submit with form details", () => {});
+test("form shows success message on submit with form details", () => {
+
+    render(<CheckoutForm />);
+
+    const firstNameInput = screen.getByLabelText(/first name/i);
+    const lastNameInput = screen.getByLabelText(/last name/i);
+    const addressInput = screen.getByLabelText(/address/i);
+    const cityInput = screen.getByLabelText(/city/i);
+    const stateInput = screen.getByLabelText(/state/i);
+    const zipInput = screen.getByLabelText(/zip/i);
+
+    fireEvent.change(firstNameInput, {target: {value: "Alan"}});
+    fireEvent.change(lastNameInput, {target: {value: "Mir"}});
+    fireEvent.change(addressInput, {target: {value: "3002 Atlantis Lane"}});
+    fireEvent.change(cityInput, {target: {value: "Olypmus"}});
+    fireEvent.change(stateInput, {target: {value: "Narnia"}});
+    fireEvent.change(zipInput, {target: {value: 30042}});
+});
