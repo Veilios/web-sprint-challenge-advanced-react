@@ -30,4 +30,15 @@ test("form shows success message on submit with form details", () => {
     fireEvent.change(cityInput, {target: {value: "Olypmus"}});
     fireEvent.change(stateInput, {target: {value: "Narnia"}});
     fireEvent.change(zipInput, {target: {value: 30042}});
+
+    expect(firstNameInput).toHaveValue("Alan");
+    expect(lastNameInput).toHaveValue("Mir");
+    expect(addressInput).toHaveValue("3002 Atlantis Lane");
+    expect(cityInput).toHaveValue("Olypmus");
+    expect(stateInput).toHaveValue("Narnia");
+    expect(zipInput).toHaveValue("30042");
+
+    expect(lastNameInput).not.toHaveValue("Alex");
+    expect(cityInput).not.toHaveValue("Asgard");
+    expect(zipInput).not.toHaveValue("333333");
 });
