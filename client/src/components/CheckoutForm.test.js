@@ -13,7 +13,7 @@ test("form header renders", () => {
 
 });
 
-test("form shows success message on submit with form details", () => {
+test("form shows success message on submit with form details", async () => {
 
     render(<CheckoutForm />);
 
@@ -41,4 +41,11 @@ test("form shows success message on submit with form details", () => {
     expect(lastNameInput).not.toHaveValue("Alex");
     expect(cityInput).not.toHaveValue("Asgard");
     expect(zipInput).not.toHaveValue("333333");
+
+    const checkoutButton = screen.getByRole("button", /checkout/i);
+    fireEvent.click(checkoutButton);
+
+    const order = await screen.findByTestId("successMessage");
+    expect(order).toBeTruthy();
+
 });
