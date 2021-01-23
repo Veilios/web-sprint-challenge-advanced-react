@@ -83,19 +83,19 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 **Starting the React app**
 
-- [ ] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
-- [ ] Still inside the `client` folder run `npm run start` to run the client application.
-- [ ] Your browser should open up the project as normal
+- [Done] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
+- [Done] Still inside the `client` folder run `npm run start` to run the client application.
+- [Done] Your browser should open up the project as normal
 
 **Starting your test runner**
 
-- [ ] In the final terminal window, make sure you are in the `client` folder still
-- [ ] Start the test runner with `npm test` (I recommend doing this only when you're testing - any change in your app will make the tests run, and that could eat up your computer power)
+- [Done] In the final terminal window, make sure you are in the `client` folder still
+- [Done] Start the test runner with `npm test` (I recommend doing this only when you're testing - any change in your app will make the tests run, and that could eat up your computer power)
 
 **Commit and Push OFTEN!**
 
-- [ ] Implement the project on this Branch, **committing progress & changes often.**
-- [ ] Push commits: `git push origin <firstName-lastName>`.
+- [Done] Implement the project on this Branch, **committing progress & changes often.**
+- [Done] Push commits: `git push origin <firstName-lastName>`.
 
 ### Task 2: Project Requirements
 
